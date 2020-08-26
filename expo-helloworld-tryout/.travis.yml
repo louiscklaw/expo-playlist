@@ -1,0 +1,8 @@
+
+jobs:
+  include:
+    - stage: Unit_test
+      name: expo-helloworld-tryout
+
+      script:
+        -  yarn
