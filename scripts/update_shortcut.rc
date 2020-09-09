@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
-set -x
-
 helloearth(){
   echo /home/logic/_workspace/preactjs-playlist/scripts/update_shortcut.rc
 }
 
 update_shortcut(){
   OWD=$PWD
-  cd /home/logic/_workspace/kicad_workspace/expo-playlist
+  cd /home/logic/_workspace/expo-playlist
   cp ./.env /tmp/.env
 
 python3 << END
