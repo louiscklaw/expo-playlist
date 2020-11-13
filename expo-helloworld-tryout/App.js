@@ -2,18 +2,25 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
-  const [name, setName] = useState('logic')
+  const [name, setName] = useState('hello')
 
   const clickHandler = () => {
-    setName('peter')
+    setName('world')
+  }
+
+  const clickClear = () => {
+    setName('hello')
   }
 
   return (
     <View style={styles.container}>
-      <Text>my name is {name}</Text>
+      <Text>{name}</Text>
       <Text></Text>
       <View style={styles.buttonContainer}>
         <Button title='update state' onPress={clickHandler} />
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button title='clear' onPress={clickClear} />
       </View>
     </View>
   );
