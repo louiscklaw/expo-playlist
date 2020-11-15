@@ -2,4 +2,6 @@
 
 set -ex
 
-expo build:status
+yarn
+
+expo start

@@ -2,4 +2,5 @@
 
 set -ex
 
-expo build:status
+yarn
+yarn clean
