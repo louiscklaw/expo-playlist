@@ -20,11 +20,22 @@ export default function App() {
   }
 
   const submitHandler = (text) => {
-    Alert.alert('OOPS!','todo must be over 3 chars long',[
-      {
-        text: 'understood', onPress: ()=>{console.log('alert closed')}
-      }
-    ])
+
+    console.log(text.length)
+    if (text.length > 3) {
+      setTodos((prevTodos) => {
+        return [
+          { text: text, key: Math.random().toString()},
+          ...prevTodos
+        ]
+      })
+    } else{
+      Alert.alert('OOPS!','todo must be over 3 chars long',[
+        {
+          text: 'understood', onPress: ()=>{console.log('alert closed')}
+        }
+      ])
+    }
   }
 
   return (
@@ -39,7 +50,7 @@ export default function App() {
             <FlatList
               data={todos}
               renderItem={({item}) =>(
-                <TodoItem item={item}/>
+                <TodoItem item={item} pressHandler={pressHandler}/>
               )}
             />
           </View>
@@ -56,9 +67,10 @@ const styles = StyleSheet.create( {
   },
   content: {
     padding: 40,
-
+    flex: 1,
   },
   list :{
-    marginTop:20
+    marginTop:20,
+    flex: 1,
   }
 } );
