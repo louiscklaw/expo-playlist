@@ -3,4 +3,5 @@
 set -ex
 
 yarn
-yarn clean
+
+expo start

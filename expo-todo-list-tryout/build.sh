@@ -3,4 +3,4 @@
 set -ex
 
 yarn
-yarn clean
+yarn build
