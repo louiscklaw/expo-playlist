@@ -9,7 +9,7 @@ export default function App() {
   const [name, setName] = useState('hello')
   const [todos, setTodos] = useState([
     { text: 'buy coffee',key: '1'},
-    { text:'create an app', key: '2'},
+    { text: 'create an app', key: '2'},
     { text: 'play on the switch',key: '3'}
   ])
 

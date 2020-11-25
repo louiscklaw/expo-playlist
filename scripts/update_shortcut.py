@@ -9,7 +9,7 @@ ENV_FILE_TO_UPDATE=sys.argv[1]
 new_command_template='''
 new_from_##PROJ_NAME##(){
   new_from ##PROJ_DIR_NAME##
-  pipenv run python3 main.py
+
   ./run.sh
 }
 '''
