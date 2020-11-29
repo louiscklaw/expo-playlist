@@ -2,4 +2,4 @@
 
 set -ex
 
-expo start
+expo start -c --max-workers 3 -a --localhost
