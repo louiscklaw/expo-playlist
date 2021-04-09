@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3344f63-e06c-47cc-adf0-9661b040c095" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/.buckconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/.flowconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/.prettierrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/.watchmanconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/__tests__/App-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/BUCK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/build_defs.bzl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/debug.keystore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/debug/java/com/reactnativehelloworld_tryout/ReactNativeFlipper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/java/com/reactnativehelloworld_tryout/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/java/com/reactnativehelloworld_tryout/MainApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/build.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/Podfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout-tvOS/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout-tvOSTests/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout.xcodeproj/xcshareddata/xcschemes/ReactNativeHelloworld_tryout-tvOS.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout.xcodeproj/xcshareddata/xcschemes/ReactNativeHelloworld_tryout.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout/AppDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout/AppDelegate.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout/Images.xcassets/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryout/main.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryoutTests/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/ios/ReactNativeHelloworld_tryoutTests/ReactNativeHelloworld_tryoutTests.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/metro.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeHelloworld_tryout/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/.buckconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/.flowconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/.prettierrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/.watchmanconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/__tests__/App-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/BUCK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/build_defs.bzl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/debug.keystore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/debug/java/com/reactnativehelloworld_tryout/ReactNativeFlipper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/java/com/reactnativehelloworld_tryout/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/java/com/reactnativehelloworld_tryout/MainApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/build.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/Podfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout-tvOS/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout-tvOSTests/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout.xcodeproj/xcshareddata/xcschemes/ReactNativeHelloworld_tryout-tvOS.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout.xcodeproj/xcshareddata/xcschemes/ReactNativeHelloworld_tryout.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout/AppDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout/AppDelegate.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout/Images.xcassets/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryout/main.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryoutTests/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/ios/ReactNativeHelloworld_tryoutTests/ReactNativeHelloworld_tryoutTests.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/metro.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactNativeNavigationHelloworld_tryout/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scripts/init_new_tryout.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../scripts/init_new_tryout.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_4_API_29]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$USER_HOME$/louis_apk_key.keystore" />
+    <option name="KEY_ALIAS" value="louis_apk_key" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1l3uHxImHqcKaNk7EXOMmofJn2v" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="ReactNativeHelloworld_tryout.app" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV1" value="true" />
+    <property name="ExportApk.SignV2" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="last_opened_file_path" value="$USER_HOME$/louis_apk_key.keystore" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="ReactNativeHelloworld_tryout.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3344f63-e06c-47cc-adf0-9661b040c095" name="Default Changelist" comment="" />
+      <created>1606838011537</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606838011537</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="743" y="299" width="424" height="480" key="FileChooserDialogImpl" timestamp="1606838666159">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="299" width="424" height="480" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1050.1680@0.27.1920.1053" timestamp="1606838666159" />
+  </component>
+</project>
