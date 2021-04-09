@@ -1,0 +1,12 @@
+{
+  "name": "RN_Tab_navigation_tryout",
+  "displayName": "RN_Tab_navigation_tryout",
+  "expo": {
+    "name": "RN_Tab_navigation_tryout",
+    "slug": "RN_Tab_navigation_tryout",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
