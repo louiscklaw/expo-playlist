@@ -1,0 +1,12 @@
+{
+  "name": "RN_styled_components_tryout",
+  "displayName": "RN_styled_components_tryout",
+  "expo": {
+    "name": "RN_styled_components_tryout",
+    "slug": "RN_styled_components_tryout",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
