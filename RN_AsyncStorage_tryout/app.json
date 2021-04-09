@@ -1,0 +1,12 @@
+{
+  "name": "RN_AsyncStorage_tryout",
+  "displayName": "RN_AsyncStorage_tryout",
+  "expo": {
+    "name": "RN_AsyncStorage_tryout",
+    "slug": "RN_AsyncStorage_tryout",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
