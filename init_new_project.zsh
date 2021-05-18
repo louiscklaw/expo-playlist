@@ -1,15 +1,12 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 set -ex
 
-rm -rf ReactNativeHelloworld_tryout
+APP_DIR=AwesomeProject
 
-react-native init ReactNativeHelloworld_tryout
+rm -rf $APP_DIR || true
 
-pushd ReactNativeHelloworld_tryout
-  # NOTES: start 'react-native start' before run-android
-  # react-native start
+expo init $APP_DIR --yes
 
-  react-native run-android
-
-popd
+pushd $APP_DIR
+  yarn start
