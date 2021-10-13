@@ -2,6 +2,8 @@
 
 set -ex
 
+yarn --dev
+
 yarn upgrade expo
 yarn upgrade react
 yarn upgrade react-native
