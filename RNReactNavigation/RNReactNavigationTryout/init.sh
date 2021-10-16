@@ -2,9 +2,9 @@
 
 set -ex
 
-npx react-native-rename RNReactNavigationTryout
 
-rm -rf node_modules
+rm -rf node_modules || true
+rm -rf /tmp/metro-* || true
 
 yarn --dev
 
