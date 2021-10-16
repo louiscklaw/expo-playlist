@@ -77,7 +77,7 @@ export default function App() {
 
   return (
     <AppearanceProvider>
-      <NavigationContainer theme={true ? DarkTheme : DefaultTheme}>
+      <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Drawer.Navigator initialRouteName="Root">
           <Drawer.Screen name="Home" component={HomeScreen} />
           <Drawer.Screen

@@ -3,7 +3,7 @@
 set -ex
 
 
-rm -rf node_modules
+# rm -rf node_modules
 rm -rf /tmp/metro-*
 
 yarn --dev
