@@ -1,3 +1,8 @@
+**/.idea
+**/caches
+**/cache
+**/.gitignore
+
 **/*.bin
 **/*.hprof
 
