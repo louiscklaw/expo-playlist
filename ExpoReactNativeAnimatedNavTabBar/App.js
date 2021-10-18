@@ -12,6 +12,16 @@ function Home() {
   return <></>;
 }
 
+const TabBarIcon = (props) => {
+  return (
+    <Icon
+      name={props.name}
+      size={props.size ? props.size : 24}
+      color={props.tintColor}
+    />
+  );
+};
+
 export default function App() {
   return (
     <NavigationContainer>
@@ -25,14 +35,8 @@ export default function App() {
           name="Home"
           component={Home}
           options={{
-            tabBarIcon: ({ focused, color, size }) => (
-              <Icon
-                name="home"
-                size={size ? size : 24}
-                color={focused ? color : "#222222"}
-                focused={focused}
-                color={color}
-              />
+            tabBarIcon: ({ focused, color }) => (
+              <TabBarIcon focused={focused} tintColor={color} name="home" />
             ),
           }}
         />
@@ -41,13 +45,25 @@ export default function App() {
           component={Home}
           options={{
             tabBarIcon: ({ focused, color, size }) => (
-              <Icon
-                name="home"
-                size={size ? size : 24}
-                color={focused ? color : "#222222"}
-                focused={focused}
-                color={color}
-              />
+              <TabBarIcon focused={focused} tintColor={color} name="search" />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="Home2"
+          component={Home}
+          options={{
+            tabBarIcon: ({ focused, color, size }) => (
+              <TabBarIcon focused={focused} tintColor={color} name="image" />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="Profile"
+          component={Home}
+          options={{
+            tabBarIcon: ({ focused, color }) => (
+              <TabBarIcon focused={focused} tintColor={color} name="user" />
             ),
           }}
         />
