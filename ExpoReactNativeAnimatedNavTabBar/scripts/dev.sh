@@ -9,4 +9,5 @@ set -ex
 # yarn add react-navigation-stack
 # yarn add react-native-screens
 
+yarn --dev
 yarn android -c
