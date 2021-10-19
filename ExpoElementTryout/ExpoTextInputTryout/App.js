@@ -1,34 +1,35 @@
-import React, { useState } from "react";
-import { Text, StyleSheet } from "react-native";
+import React from "react";
+import { SafeAreaView, StyleSheet, TextInput } from "react-native";
 
-const TextInANest = () => {
-  const [titleText, setTitleText] = useState("Bird's Nest");
-  const bodyText = "This is not really a bird nest.";
-
-  const onPressTitle = () => {
-    setTitleText("Bird's Nest [pressed]");
-  };
+const UselessTextInput = () => {
+  const [text, onChangeText] = React.useState("Useless Text");
+  const [number, onChangeNumber] = React.useState(null);
 
   return (
-    <Text style={styles.baseText}>
-      <Text style={styles.titleText} onPress={onPressTitle}>
-        {titleText}
-        {"\n"}
-        {"\n"}
-      </Text>
-      <Text numberOfLines={5}>{bodyText}</Text>
-    </Text>
+    <SafeAreaView>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeText}
+        value={text}
+      />
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="useless placeholder"
+        keyboardType="numeric"
+      />
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  baseText: {
-    fontFamily: "Cochin",
-  },
-  titleText: {
-    fontSize: 20,
-    fontWeight: "bold",
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
   },
 });
 
-export default TextInANest;
+export default UselessTextInput;
