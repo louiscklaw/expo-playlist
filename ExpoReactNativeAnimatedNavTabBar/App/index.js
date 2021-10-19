@@ -7,13 +7,15 @@ import { AnimatedTabBarNavigator } from "react-native-animated-nav-tab-bar";
 import Icon from "react-native-vector-icons/Feather";
 import styled from "styled-components/native";
 
+import { Screen1, Screen2, Screen3 } from "./screens/Screen1";
+
 const Tabs = AnimatedTabBarNavigator();
 
 const Screen = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
 `;
 
 const Logo = () => (
@@ -26,7 +28,7 @@ const Logo = () => (
 
 const Home = (props) => (
   <Screen>
-    <Logo />
+    <Screen1 />
     <Text>Home</Text>
     <TouchableOpacity onPress={() => props.navigation.navigate("Discover")}>
       <Text>Go to Discover</Text>
@@ -36,7 +38,7 @@ const Home = (props) => (
 
 const Discover = (props) => (
   <Screen>
-    <Logo />
+    <Screen2 />
     <Text>Discover</Text>
     <TouchableOpacity onPress={() => props.navigation.navigate("Home")}>
       <Text>Go to Home</Text>
@@ -46,7 +48,7 @@ const Discover = (props) => (
 
 const Images = () => (
   <Screen>
-    <Logo />
+    <Screen3 />
     <Text>Images</Text>
   </Screen>
 );
@@ -63,7 +65,7 @@ const TabBarIcon = (props) => {
     <Icon
       name={props.name}
       size={props.size ? props.size : 24}
-      color={props.tintColor}
+      color={props.focused ? "#fff" : "#222222"}
     />
   );
 };
@@ -73,12 +75,13 @@ export default function App() {
     <NavigationContainer>
       <Tabs.Navigator
         tabBarOptions={{
-          activeTintColor: "#2F7C6E",
+          activeTintColor: "#fff",
           inactiveTintColor: "#222222",
+          activeBackgroundColor: "#800000",
         }}
       >
         <Tabs.Screen
-          name="Home"
+          name="メニュー"
           component={Home}
           options={{
             tabBarIcon: ({ focused, color }) => (
@@ -87,7 +90,7 @@ export default function App() {
           }}
         />
         <Tabs.Screen
-          name="Discover"
+          name="注文履歴"
           component={Discover}
           options={{
             tabBarIcon: ({ focused, color, size }) => (
@@ -96,20 +99,11 @@ export default function App() {
           }}
         />
         <Tabs.Screen
-          name="Images"
+          name="注文リスト"
           component={Images}
           options={{
             tabBarIcon: ({ focused, color, size }) => (
               <TabBarIcon focused={focused} tintColor={color} name="image" />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="Profile"
-          component={Profile}
-          options={{
-            tabBarIcon: ({ focused, color }) => (
-              <TabBarIcon focused={focused} tintColor={color} name="user" />
             ),
           }}
         />
