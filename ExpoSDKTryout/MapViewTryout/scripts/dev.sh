@@ -16,4 +16,4 @@ yarn --dev
 expo install expo-status-bar
 expo install react-native-maps
 
-yarn android
+# yarn android
