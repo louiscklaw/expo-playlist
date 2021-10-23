@@ -2,7 +2,7 @@
 
 set -ex
 
-rm -rf node_modules || true
+# rm -rf node_modules || true
 rm -rf /tmp/metro-* || true
 
 yarn --dev
@@ -17,5 +17,3 @@ expo install expo-status-bar
 expo install expo-sensors
 
 yarn android
-
-git add .
