@@ -2,8 +2,8 @@
 
 set -ex
 
-rm -rf node_modules || true
-rm -rf /tmp/metro-* || true
+# rm -rf node_modules || true
+# rm -rf /tmp/metro-* || true
 
 # adb shell am force-stop host.exp.exponent || true
 # sleep 5
