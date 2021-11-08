@@ -9,4 +9,8 @@ set -ex
 # yarn add react-navigation-stack
 # yarn add react-native-screens
 
-yarn android -c
+expo install d3-shape
+expo install react-native-curved-bottom-bar
+expo install react-native-svg react-native-pager-view
+expo install react-native-pager-view
+
