@@ -1,0 +1,20 @@
+#!/usr/bin/expect 
+
+set timeout -1
+
+spawn yarn start
+
+sleep 15
+
+expect -nocase "below"
+
+sleep 30
+
+send "a"
+
+sleep 30
+
+send "a"
+
+
+expect -nocase "bel1ow"
