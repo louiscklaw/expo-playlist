@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloworldTryout",
-    "slug": "HelloworldTryout",
+    "name": "VariantsTryout",
+    "slug": "VariantsTryout",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

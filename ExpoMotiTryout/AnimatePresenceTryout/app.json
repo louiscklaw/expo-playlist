@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expo-tsx-helloworld-tryout",
-    "slug": "expo-tsx-helloworld-tryout",
+    "name": "AnimatePresenceTryout",
+    "slug": "AnimatePresenceTryout",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
