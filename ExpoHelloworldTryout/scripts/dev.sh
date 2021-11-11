@@ -13,6 +13,6 @@ yarn --dev
 # yarn add react-native
 # yarn add react-native-web
 
-expo install expo-status-bar
+# expo install expo-status-bar
 
 yarn android
