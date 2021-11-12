@@ -1,0 +1,3 @@
+[submodule "expo-next-monorepo-example"]
+	path = expo-next-monorepo-example
+	url = git@github.com:axeldelafosse/expo-next-monorepo-example.git
