@@ -10,7 +10,7 @@ set -ex
 
 # sudo yarn global add expo-cli
 
-DST_DIR=ExpoTiktokTryout
+DST_DIR=ExpoNativeBaseTryout
 
 
 rm -rf $DST_DIR || true

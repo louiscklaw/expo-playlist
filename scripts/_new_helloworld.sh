@@ -2,10 +2,10 @@
 
 set -ex
 
-rm -rf react-native-shared-element-tryout
+rm -rf ExpoHeadlessJsTryout || true
 
-cp -r expo-tsx-helloworld-tryout  react-native-shared-element-tryout
+cp -r ExpoTsxHelloworldTryout  ExpoHeadlessJsTryout
 
-pushd react-native-shared-element-tryout
+pushd ExpoHeadlessJsTryout
   scripts/clear_cache.sh
   scripts/dev.sh
