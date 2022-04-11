@@ -1,3 +1,4 @@
 yarn --dev
 
-yarn start
+
+yarn start --reset-cache
