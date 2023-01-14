@@ -7,7 +7,10 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "format": "npx prettier --loglevel warn --write \"**/*.{js,css,html,jsx,tsx,ts,json}\"",
+    "gitSync": "git fetch --all && git pull --all ",
+    "gitUpdate": "git add . && git commit -m \"update ExpoHelloworld,\" && yarn gitSync && git push"
   },
   "dependencies": {
     "expo": "~44.0.0",
