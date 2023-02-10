@@ -8,12 +8,10 @@ import { isRTL } from "../i18n"
 import { useStores } from "../models"
 
 function openLinkInBrowser(url: string) {
-  Linking.canOpenURL(url).then((canOpen) => canOpen && Linking.openURL(url))
+  Linking.canOpenURL(url).then(canOpen => canOpen && Linking.openURL(url))
 }
 
-export const DemoDebugScreen: FC<DemoTabScreenProps<"DemoDebug">> = function DemoDebugScreen(
-  _props,
-) {
+export const DemoDebugScreen: FC<DemoTabScreenProps<"DemoDebug">> = function DemoDebugScreen(_props) {
   const {
     authenticationStore: { logout },
   } = useStores()

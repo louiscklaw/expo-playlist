@@ -1,13 +1,5 @@
 import React, { ComponentType, forwardRef, Ref, useImperativeHandle, useRef } from "react"
-import {
-  StyleProp,
-  TextInput,
-  TextInputProps,
-  TextStyle,
-  TouchableOpacity,
-  View,
-  ViewStyle,
-} from "react-native"
+import { StyleProp, TextInput, TextInputProps, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native"
 import { isRTL, translate } from "../i18n"
 import { colors, spacing, typography } from "../theme"
 import { Text, TextProps } from "./Text"
@@ -127,9 +119,7 @@ export const TextField = forwardRef(function TextField(props: TextFieldProps, re
 
   const disabled = TextInputProps.editable === false || status === "disabled"
 
-  const placeholderContent = placeholderTx
-    ? translate(placeholderTx, placeholderTxOptions)
-    : placeholder
+  const placeholderContent = placeholderTx ? translate(placeholderTx, placeholderTxOptions) : placeholder
 
   const $containerStyles = [$containerStyleOverride]
 
@@ -152,11 +142,7 @@ export const TextField = forwardRef(function TextField(props: TextFieldProps, re
     $inputStyleOverride,
   ]
 
-  const $helperStyles = [
-    $helperStyle,
-    status === "error" && { color: colors.error },
-    HelperTextProps?.style,
-  ]
+  const $helperStyles = [$helperStyle, status === "error" && { color: colors.error }, HelperTextProps?.style]
 
   function focusInput() {
     if (disabled) return
@@ -167,12 +153,7 @@ export const TextField = forwardRef(function TextField(props: TextFieldProps, re
   useImperativeHandle(ref, () => input.current)
 
   return (
-    <TouchableOpacity
-      activeOpacity={1}
-      style={$containerStyles}
-      onPress={focusInput}
-      accessibilityState={{ disabled }}
-    >
+    <TouchableOpacity activeOpacity={1} style={$containerStyles} onPress={focusInput} accessibilityState={{ disabled }}>
       {!!(label || labelTx) && (
         <Text
           preset="formLabel"

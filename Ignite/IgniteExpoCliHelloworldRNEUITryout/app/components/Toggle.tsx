@@ -180,19 +180,12 @@ export function Toggle(props: ToggleProps) {
 
   const disabled = editable === false || status === "disabled" || props.disabled
 
-  const Wrapper = useMemo<ComponentType<TouchableOpacityProps>>(
-    () => (disabled ? View : TouchableOpacity),
-    [disabled],
-  )
+  const Wrapper = useMemo<ComponentType<TouchableOpacityProps>>(() => (disabled ? View : TouchableOpacity), [disabled])
   const ToggleInput = useMemo(() => ToggleInputs[variant] || (() => null), [variant])
 
   const $containerStyles = [$containerStyleOverride]
   const $inputWrapperStyles = [$inputWrapper, $inputWrapperStyleOverride]
-  const $helperStyles = [
-    $helper,
-    status === "error" && { color: colors.error },
-    HelperTextProps?.style,
-  ]
+  const $helperStyles = [$helper, status === "error" && { color: colors.error }, HelperTextProps?.style]
 
   function handlePress(e: GestureResponderEvent) {
     if (disabled) return
@@ -358,9 +351,7 @@ function Radio(props: ToggleInputProps) {
           useAnimatedStyle(() => ({ opacity: withTiming(on ? 1 : 0) }), [on]),
         ]}
       >
-        <View
-          style={[$radioDetail, { backgroundColor: dotBackgroundColor }, $detailStyleOverride]}
-        />
+        <View style={[$radioDetail, { backgroundColor: dotBackgroundColor }, $detailStyleOverride]} />
       </Animated.View>
     </View>
   )
@@ -379,11 +370,11 @@ function Switch(props: ToggleInputProps) {
   const knobSizeFallback = 2
 
   const knobWidth = [$detailStyleOverride?.width, $switchDetail?.width, knobSizeFallback].find(
-    (v) => typeof v === "number",
+    v => typeof v === "number",
   )
 
   const knobHeight = [$detailStyleOverride?.height, $switchDetail?.height, knobSizeFallback].find(
-    (v) => typeof v === "number",
+    v => typeof v === "number",
   )
 
   const offBackgroundColor = [
@@ -436,13 +427,7 @@ function Switch(props: ToggleInputProps) {
   }, [on, knobWidth])
 
   return (
-    <View
-      style={[
-        $inputOuterVariants.switch,
-        { backgroundColor: offBackgroundColor },
-        $outerStyleOverride,
-      ]}
-    >
+    <View style={[$inputOuterVariants.switch, { backgroundColor: offBackgroundColor }, $outerStyleOverride]}>
       <Animated.View
         style={[
           $switchInner,

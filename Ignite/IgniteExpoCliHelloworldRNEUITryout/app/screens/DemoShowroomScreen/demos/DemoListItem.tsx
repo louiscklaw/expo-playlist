@@ -11,7 +11,7 @@ import { DemoUseCase } from "../DemoUseCase"
 const flatListData =
   `Tempor Id Ea Aliqua Pariatur Aliquip. Irure Minim Voluptate Consectetur Consequat Sint Esse Proident Irure. Nostrud Elit Veniam Nostrud Excepteur Minim Deserunt Quis Dolore Velit Nulla Irure Voluptate Tempor. Occaecat Amet Laboris Nostrud Qui Do Quis Lorem Ex Elit Fugiat Deserunt. In Pariatur Excepteur Exercitation Ex Incididunt Qui Mollit Dolor Sit Non. Culpa Officia Minim Cillum Exercitation Voluptate Proident Laboris Et Est Reprehenderit Quis Pariatur Nisi`
     .split(".")
-    .map((item) => item.trim())
+    .map(item => item.trim())
 
 const $customLeft: ViewStyle = {
   backgroundColor: colors.error,
@@ -63,10 +63,7 @@ export const DemoListItem: Demo = {
       </ListItem>
     </DemoUseCase>,
 
-    <DemoUseCase
-      name="Separators"
-      description="The separator / divider is preconfigured and optional."
-    >
+    <DemoUseCase name="Separators" description="The separator / divider is preconfigured and optional.">
       <ListItem topSeparator>Only top separator</ListItem>
 
       <DemoDivider size={40} />
@@ -102,7 +99,7 @@ export const DemoListItem: Demo = {
         topSeparator
         LeftComponent={
           <View style={[$customLeft, { marginEnd: spacing.medium }]}>
-            {Array.from({ length: 9 }, (x, i) => i).map((i) => (
+            {Array.from({ length: 9 }, (x, i) => i).map(i => (
               <Icon key={i} icon="ladybug" color={colors.palette.neutral100} size={20} />
             ))}
           </View>
@@ -116,7 +113,7 @@ export const DemoListItem: Demo = {
         bottomSeparator
         RightComponent={
           <View style={[$customLeft, { marginStart: spacing.medium }]}>
-            {Array.from({ length: 9 }, (x, i) => i).map((i) => (
+            {Array.from({ length: 9 }, (x, i) => i).map(i => (
               <Icon key={i} icon="ladybug" color={colors.palette.neutral100} size={20} />
             ))}
           </View>
@@ -126,10 +123,7 @@ export const DemoListItem: Demo = {
       </ListItem>
     </DemoUseCase>,
 
-    <DemoUseCase
-      name="Passing Content"
-      description="There are a few different ways to pass content."
-    >
+    <DemoUseCase name="Passing Content" description="There are a few different ways to pass content.">
       <ListItem topSeparator text="Via `text` prop - reprehenderit sint" />
       <ListItem topSeparator tx="demoShowroomScreen.demoViaTxProp" />
       <ListItem topSeparator>Children - mostrud mollit</ListItem>
@@ -137,9 +131,7 @@ export const DemoListItem: Demo = {
         <Text>
           <Text preset="bold">Nested children - proident veniam.</Text>
           {` `}
-          <Text preset="default">
-            Ullamco cupidatat officia exercitation velit non ullamco nisi..
-          </Text>
+          <Text preset="default">Ullamco cupidatat officia exercitation velit non ullamco nisi..</Text>
         </Text>
       </ListItem>
     </DemoUseCase>,
@@ -153,12 +145,7 @@ export const DemoListItem: Demo = {
           data={flatListData}
           style={$flatListStyle}
           renderItem={({ item, index }) => (
-            <ListItem
-              text={item}
-              rightIcon="caretRight"
-              TextProps={{ numberOfLines: 1 }}
-              topSeparator={index !== 0}
-            />
+            <ListItem text={item} rightIcon="caretRight" TextProps={{ numberOfLines: 1 }} topSeparator={index !== 0} />
           )}
         />
       </View>
@@ -169,11 +156,7 @@ export const DemoListItem: Demo = {
         Styled Text
       </ListItem>
 
-      <ListItem
-        topSeparator
-        textStyle={{ color: colors.palette.neutral100 }}
-        style={$customTouchableStyle}
-      >
+      <ListItem topSeparator textStyle={{ color: colors.palette.neutral100 }} style={$customTouchableStyle}>
         Styled Text
       </ListItem>
 

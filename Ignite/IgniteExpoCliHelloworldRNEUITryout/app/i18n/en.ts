@@ -49,8 +49,7 @@ const en = {
   },
   demoCommunityScreen: {
     title: "Connect with the community",
-    tagLine:
-      "Plug in to Infinite Red's community of React Native engineers and level up your app development with us!",
+    tagLine: "Plug in to Infinite Red's community of React Native engineers and level up your app development with us!",
     joinUsOnSlackTitle: "Join us on Slack",
     joinUsOnSlack:
       "Wish there was a place to connect with React Native engineers around the world? Join the conversation in the Infinite Red Community Slack! Our growing community is a safe space to ask questions, learn from others, and grow your network.",
@@ -89,14 +88,10 @@ const en = {
     demoPodcastList: "Demo Podcast List",
     androidReactotronHint:
       "If this doesn't work, ensure the Reactotron desktop app is running, run adb reverse tcp:9090 tcp:9090 from your terminal, and reload the app.",
-    iosReactotronHint:
-      "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
-    macosReactotronHint:
-      "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
-    webReactotronHint:
-      "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
-    windowsReactotronHint:
-      "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
+    iosReactotronHint: "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
+    macosReactotronHint: "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
+    webReactotronHint: "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
+    windowsReactotronHint: "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
   },
   demoPodcastListScreen: {
     title: "React Native Radio episodes",
@@ -104,8 +99,7 @@ const en = {
     favoriteButton: "Favorite",
     unfavoriteButton: "Unfavorite",
     accessibility: {
-      cardHint:
-        "Double tap to listen to the episode. Double tap and hold to {{action}} this episode.",
+      cardHint: "Double tap to listen to the episode. Double tap and hold to {{action}} this episode.",
       switch: "Switch on to only show favorites",
       favoriteAction: "Toggle Favorite",
       favoriteIcon: "Episode not favorited",
@@ -115,8 +109,7 @@ const en = {
     },
     noFavoritesEmptyState: {
       heading: "This looks a bit empty",
-      content:
-        "No favorites have been added yet. Tap the heart on an episode to add it to your favorites!",
+      content: "No favorites have been added yet. Tap the heart on an episode to add it to your favorites!",
     },
   },
   // @demo remove-block-end

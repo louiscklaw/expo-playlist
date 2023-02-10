@@ -7,7 +7,7 @@ export const AuthenticationStoreModel = types
     authEmail: "",
     authPassword: "",
   })
-  .views((store) => ({
+  .views(store => ({
     get isAuthenticated() {
       return !!store.authToken
     },
@@ -16,8 +16,7 @@ export const AuthenticationStoreModel = types
         authEmail: (function () {
           if (store.authEmail.length === 0) return "can't be blank"
           if (store.authEmail.length < 6) return "must be at least 6 characters"
-          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(store.authEmail))
-            return "must be a valid email address"
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(store.authEmail)) return "must be a valid email address"
           return ""
         })(),
         authPassword: (function () {
@@ -28,7 +27,7 @@ export const AuthenticationStoreModel = types
       }
     },
   }))
-  .actions((store) => ({
+  .actions(store => ({
     setAuthToken(value?: string) {
       store.authToken = value
     },
@@ -44,7 +43,7 @@ export const AuthenticationStoreModel = types
       store.authPassword = ""
     },
   }))
-  .preProcessSnapshot((snapshot) => {
+  .preProcessSnapshot(snapshot => {
     // remove sensitive data from snapshot to avoid secrets
     // being stored in AsyncStorage in plain text if backing up store
     const { authToken, authPassword, ...rest } = snapshot // eslint-disable-line @typescript-eslint/no-unused-vars

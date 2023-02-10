@@ -36,33 +36,25 @@ test("handles unknown errors", () => {
 })
 
 test("handles unauthorized errors", () => {
-  expect(
-    getGeneralApiProblem({ problem: "CLIENT_ERROR", status: 401 } as ApiErrorResponse<null>),
-  ).toEqual({
+  expect(getGeneralApiProblem({ problem: "CLIENT_ERROR", status: 401 } as ApiErrorResponse<null>)).toEqual({
     kind: "unauthorized",
   })
 })
 
 test("handles forbidden errors", () => {
-  expect(
-    getGeneralApiProblem({ problem: "CLIENT_ERROR", status: 403 } as ApiErrorResponse<null>),
-  ).toEqual({
+  expect(getGeneralApiProblem({ problem: "CLIENT_ERROR", status: 403 } as ApiErrorResponse<null>)).toEqual({
     kind: "forbidden",
   })
 })
 
 test("handles not-found errors", () => {
-  expect(
-    getGeneralApiProblem({ problem: "CLIENT_ERROR", status: 404 } as ApiErrorResponse<null>),
-  ).toEqual({
+  expect(getGeneralApiProblem({ problem: "CLIENT_ERROR", status: 404 } as ApiErrorResponse<null>)).toEqual({
     kind: "not-found",
   })
 })
 
 test("handles other client errors", () => {
-  expect(
-    getGeneralApiProblem({ problem: "CLIENT_ERROR", status: 418 } as ApiErrorResponse<null>),
-  ).toEqual({
+  expect(getGeneralApiProblem({ problem: "CLIENT_ERROR", status: 418 } as ApiErrorResponse<null>)).toEqual({
     kind: "rejected",
   })
 })

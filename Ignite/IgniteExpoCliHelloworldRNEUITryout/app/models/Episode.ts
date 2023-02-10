@@ -29,7 +29,7 @@ export const EpisodeModel = types
     categories: types.array(types.string),
   })
   .actions(withSetPropAction)
-  .views((episode) => ({
+  .views(episode => ({
     get parsedTitleAndSubtitle() {
       const defaultValue = { title: episode.title?.trim(), subtitle: "" }
 

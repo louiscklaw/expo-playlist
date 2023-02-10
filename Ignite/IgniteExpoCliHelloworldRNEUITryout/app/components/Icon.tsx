@@ -1,14 +1,6 @@
 import * as React from "react"
 import { ComponentType } from "react"
-import {
-  Image,
-  ImageStyle,
-  StyleProp,
-  TouchableOpacity,
-  TouchableOpacityProps,
-  View,
-  ViewStyle,
-} from "react-native"
+import { Image, ImageStyle, StyleProp, TouchableOpacity, TouchableOpacityProps, View, ViewStyle } from "react-native"
 
 export type IconTypes = keyof typeof iconRegistry
 
@@ -61,9 +53,7 @@ export function Icon(props: IconProps) {
   } = props
 
   const isPressable = !!WrapperProps.onPress
-  const Wrapper: ComponentType<TouchableOpacityProps> = WrapperProps?.onPress
-    ? TouchableOpacity
-    : View
+  const Wrapper: ComponentType<TouchableOpacityProps> = WrapperProps?.onPress ? TouchableOpacity : View
 
   return (
     <Wrapper
@@ -72,12 +62,7 @@ export function Icon(props: IconProps) {
       style={$containerStyleOverride}
     >
       <Image
-        style={[
-          $imageStyle,
-          color && { tintColor: color },
-          size && { width: size, height: size },
-          $imageStyleOverride,
-        ]}
+        style={[$imageStyle, color && { tintColor: color }, size && { width: size, height: size }, $imageStyleOverride]}
         source={iconRegistry[icon]}
       />
     </Wrapper>

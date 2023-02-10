@@ -11,11 +11,7 @@ export interface ErrorDetailsProps {
 
 export function ErrorDetails(props: ErrorDetailsProps) {
   return (
-    <Screen
-      preset="fixed"
-      safeAreaEdges={["top", "bottom"]}
-      contentContainerStyle={$contentContainer}
-    >
+    <Screen preset="fixed" safeAreaEdges={["top", "bottom"]} contentContainerStyle={$contentContainer}>
       <View style={$topSection}>
         <Icon icon="ladybug" size={64} />
         <Text style={$heading} preset="subheading" tx="errorScreen.title" />
@@ -24,19 +20,10 @@ export function ErrorDetails(props: ErrorDetailsProps) {
 
       <ScrollView style={$errorSection} contentContainerStyle={$errorSectionContentContainer}>
         <Text style={$errorContent} weight="bold" text={`${props.error}`.trim()} />
-        <Text
-          selectable
-          style={$errorBacktrace}
-          text={`${props.errorInfo.componentStack}`.trim()}
-        />
+        <Text selectable style={$errorBacktrace} text={`${props.errorInfo.componentStack}`.trim()} />
       </ScrollView>
 
-      <Button
-        preset="reversed"
-        style={$resetButton}
-        onPress={props.onReset}
-        tx="errorScreen.reset"
-      />
+      <Button preset="reversed" style={$resetButton} onPress={props.onReset} tx="errorScreen.reset" />
     </Screen>
   )
 }

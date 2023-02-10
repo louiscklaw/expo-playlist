@@ -57,13 +57,7 @@ export function Text(props: TextProps) {
   const content = i18nText || text || children
 
   const preset: Presets = $presets[props.preset] ? props.preset : "default"
-  const $styles = [
-    $rtlStyle,
-    $presets[preset],
-    $fontWeightStyles[weight],
-    $sizeStyles[size],
-    $styleOverride,
-  ]
+  const $styles = [$rtlStyle, $presets[preset], $fontWeightStyles[weight], $sizeStyles[size], $styleOverride]
 
   return (
     <RNText {...rest} style={$styles}>
@@ -86,11 +80,7 @@ const $fontWeightStyles = Object.entries(typography.primary).reduce((acc, [weigh
   return { ...acc, [weight]: { fontFamily } }
 }, {}) as Record<Weights, TextStyle>
 
-const $baseStyle: StyleProp<TextStyle> = [
-  $sizeStyles.sm,
-  $fontWeightStyles.normal,
-  { color: colors.text },
-]
+const $baseStyle: StyleProp<TextStyle> = [$sizeStyles.sm, $fontWeightStyles.normal, { color: colors.text }]
 
 const $presets = {
   default: $baseStyle,
