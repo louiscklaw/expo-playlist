@@ -6,6 +6,10 @@ import { useStores } from "../models"
 import { AppStackScreenProps } from "../navigators"
 import { colors, spacing } from "../theme"
 
+import { Button as RNEButton } from "@rneui/themed"
+import { ButtonGroup } from "@rneui/themed"
+import { Card, Text as RNEText } from "@rneui/themed"
+
 interface LoginScreenProps extends AppStackScreenProps<"Login"> {}
 
 export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_props) {
@@ -71,6 +75,9 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
     }
   }, [])
 
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [selectedIndexes, setSelectedIndexes] = useState([0, 2, 3])
+
   return (
     <Screen
       preset="auto"
@@ -112,6 +119,31 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
         onSubmitEditing={login}
         RightAccessory={PasswordRightAccessory}
       />
+
+      <Card>
+        <RNEText>Word of the Day</RNEText>
+        <RNEText h4>be-nev-o=lent</RNEText>
+        <RNEText>adjective</RNEText>
+        <RNEText>
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </RNEText>
+        <RNEButton size="sm" type="clear">
+          Learn More
+        </RNEButton>
+      </Card>
+
+      <ButtonGroup
+        buttons={["SIMPLE", "BUTTON", "GROUP"]}
+        selectedIndex={selectedIndex}
+        onPress={(value) => {
+          setSelectedIndex(value)
+        }}
+        containerStyle={{ marginBottom: 20 }}
+      />
+
+      <RNEButton title="Solid" />
 
       <Button
         testID="login-button"
