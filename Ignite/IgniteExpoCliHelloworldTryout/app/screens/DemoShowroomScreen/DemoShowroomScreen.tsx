@@ -35,7 +35,7 @@ interface DemoListItem {
   handleScroll?: (sectionIndex: number, itemIndex?: number) => void
 }
 
-const slugify = (str) =>
+const slugify = str =>
   str
     .toLowerCase()
     .trim()
@@ -51,7 +51,7 @@ const WebListItem: FC<DemoListItem> = ({ item, sectionIndex }) => {
       <Link to={`/showroom/${sectionSlug}`} style={$menuContainer}>
         <Text preset="bold">{item.name}</Text>
       </Link>
-      {item.useCases.map((u) => {
+      {item.useCases.map(u => {
         const itemSlug = slugify(u)
 
         return (
@@ -84,152 +84,147 @@ const NativeListItem: FC<DemoListItem> = ({ item, sectionIndex, handleScroll }) 
 
 const ShowroomListItem = Platform.select({ web: WebListItem, default: NativeListItem })
 
-export const DemoShowroomScreen: FC<DemoTabScreenProps<"DemoShowroom">> =
-  function DemoShowroomScreen(_props) {
-    const [open, setOpen] = useState(false)
-    const timeout = useRef<ReturnType<typeof setTimeout>>()
-    const drawerRef = useRef<DrawerLayout>()
-    const listRef = useRef<SectionList>()
-    const menuRef = useRef<FlatList>()
-    const progress = useSharedValue(0)
-    const route = useRoute<RouteProp<DemoTabParamList, "DemoShowroom">>()
-    const params = route.params
+export const DemoShowroomScreen: FC<DemoTabScreenProps<"DemoShowroom">> = function DemoShowroomScreen(_props) {
+  const [open, setOpen] = useState(false)
+  const timeout = useRef<ReturnType<typeof setTimeout>>()
+  const drawerRef = useRef<DrawerLayout>()
+  const listRef = useRef<SectionList>()
+  const menuRef = useRef<FlatList>()
+  const progress = useSharedValue(0)
+  const route = useRoute<RouteProp<DemoTabParamList, "DemoShowroom">>()
+  const params = route.params
 
-    // handle Web links
-    React.useEffect(() => {
-      if (route.params) {
-        const demoValues = Object.values(Demos)
-        const findSectionIndex = demoValues.findIndex(
-          (x) => x.name.toLowerCase() === params.queryIndex,
-        )
-        let findItemIndex = 0
-        if (params.itemIndex) {
-          try {
-            findItemIndex =
-              demoValues[findSectionIndex].data.findIndex(
-                (u) => slugify(u.props.name) === params.itemIndex,
-              ) + 1
-          } catch (err) {
-            console.error(err)
-          }
+  // handle Web links
+  React.useEffect(() => {
+    if (route.params) {
+      const demoValues = Object.values(Demos)
+      const findSectionIndex = demoValues.findIndex(x => x.name.toLowerCase() === params.queryIndex)
+      let findItemIndex = 0
+      if (params.itemIndex) {
+        try {
+          findItemIndex =
+            demoValues[findSectionIndex].data.findIndex(u => slugify(u.props.name) === params.itemIndex) + 1
+        } catch (err) {
+          console.error(err)
         }
-        handleScroll(findSectionIndex, findItemIndex)
       }
-    }, [route])
-
-    const toggleDrawer = () => {
-      if (!open) {
-        setOpen(true)
-        drawerRef.current?.openDrawer({ speed: 2 })
-      } else {
-        setOpen(false)
-        drawerRef.current?.closeDrawer({ speed: 2 })
-      }
+      handleScroll(findSectionIndex, findItemIndex)
     }
+  }, [route])
 
-    const handleScroll = (sectionIndex: number, itemIndex = 0) => {
-      listRef.current.scrollToLocation({
-        animated: true,
-        itemIndex,
-        sectionIndex,
-      })
-      toggleDrawer()
+  const toggleDrawer = () => {
+    if (!open) {
+      setOpen(true)
+      drawerRef.current?.openDrawer({ speed: 2 })
+    } else {
+      setOpen(false)
+      drawerRef.current?.closeDrawer({ speed: 2 })
     }
+  }
 
-    const scrollToIndexFailed = (info: {
-      index: number
-      highestMeasuredFrameIndex: number
-      averageItemLength: number
-    }) => {
-      listRef.current?.getScrollResponder()?.scrollToEnd()
-      timeout.current = setTimeout(
-        () =>
-          listRef.current?.scrollToLocation({
-            animated: true,
-            itemIndex: info.index,
-            sectionIndex: 0,
-          }),
-        50,
-      )
-    }
+  const handleScroll = (sectionIndex: number, itemIndex = 0) => {
+    listRef.current.scrollToLocation({
+      animated: true,
+      itemIndex,
+      sectionIndex,
+    })
+    toggleDrawer()
+  }
 
-    useEffect(() => {
-      return () => timeout.current && clearTimeout(timeout.current)
-    }, [])
-
-    const $drawerInsets = useSafeAreaInsetsStyle(["top"])
-
-    return (
-      <DrawerLayout
-        ref={drawerRef}
-        drawerWidth={Platform.select({ default: 326, web: Dimensions.get("window").width * 0.3 })}
-        drawerType={"slide"}
-        drawerPosition={isRTL ? "right" : "left"}
-        drawerBackgroundColor={colors.palette.neutral100}
-        overlayColor={colors.palette.overlay20}
-        onDrawerSlide={(drawerProgress) => {
-          progress.value = open ? 1 - drawerProgress : drawerProgress
-        }}
-        onDrawerStateChanged={(newState: DrawerState, drawerWillShow: boolean) => {
-          if (newState === "Settling") {
-            progress.value = withTiming(drawerWillShow ? 1 : 0, {
-              duration: 250,
-            })
-            setOpen(drawerWillShow)
-          }
-        }}
-        renderNavigationView={() => (
-          <View style={[$drawer, $drawerInsets]}>
-            <View style={$logoContainer}>
-              <Image source={logo} style={$logoImage} />
-            </View>
-
-            <FlatList<{ name: string; useCases: string[] }>
-              ref={menuRef}
-              contentContainerStyle={$flatListContentContainer}
-              data={Object.values(Demos).map((d) => ({
-                name: d.name,
-                useCases: d.data.map((u) => u.props.name),
-              }))}
-              keyExtractor={(item) => item.name}
-              renderItem={({ item, index: sectionIndex }) => (
-                <ShowroomListItem {...{ item, sectionIndex, handleScroll }} />
-              )}
-            />
-          </View>
-        )}
-      >
-        <Screen preset="fixed" safeAreaEdges={["top"]} contentContainerStyle={$screenContainer}>
-          <DrawerIconButton onPress={toggleDrawer} {...{ open, progress }} />
-
-          <SectionList
-            ref={listRef}
-            contentContainerStyle={$sectionListContentContainer}
-            stickySectionHeadersEnabled={false}
-            sections={Object.values(Demos)}
-            renderItem={({ item }) => item}
-            renderSectionFooter={() => <View style={$demoUseCasesSpacer} />}
-            ListHeaderComponent={
-              <View style={$heading}>
-                <Text preset="heading" tx="demoShowroomScreen.jumpStart" />
-              </View>
-            }
-            onScrollToIndexFailed={scrollToIndexFailed}
-            renderSectionHeader={({ section }) => {
-              return (
-                <View>
-                  <Text preset="heading" style={$demoItemName}>
-                    {section.name}
-                  </Text>
-                  <Text style={$demoItemDescription}>{section.description}</Text>
-                </View>
-              )
-            }}
-          />
-        </Screen>
-      </DrawerLayout>
+  const scrollToIndexFailed = (info: {
+    index: number
+    highestMeasuredFrameIndex: number
+    averageItemLength: number
+  }) => {
+    listRef.current?.getScrollResponder()?.scrollToEnd()
+    timeout.current = setTimeout(
+      () =>
+        listRef.current?.scrollToLocation({
+          animated: true,
+          itemIndex: info.index,
+          sectionIndex: 0,
+        }),
+      50,
     )
   }
+
+  useEffect(() => {
+    return () => timeout.current && clearTimeout(timeout.current)
+  }, [])
+
+  const $drawerInsets = useSafeAreaInsetsStyle(["top"])
+
+  return (
+    <DrawerLayout
+      ref={drawerRef}
+      drawerWidth={Platform.select({ default: 326, web: Dimensions.get("window").width * 0.3 })}
+      drawerType={"slide"}
+      drawerPosition={isRTL ? "right" : "left"}
+      drawerBackgroundColor={colors.palette.neutral100}
+      overlayColor={colors.palette.overlay20}
+      onDrawerSlide={drawerProgress => {
+        progress.value = open ? 1 - drawerProgress : drawerProgress
+      }}
+      onDrawerStateChanged={(newState: DrawerState, drawerWillShow: boolean) => {
+        if (newState === "Settling") {
+          progress.value = withTiming(drawerWillShow ? 1 : 0, {
+            duration: 250,
+          })
+          setOpen(drawerWillShow)
+        }
+      }}
+      renderNavigationView={() => (
+        <View style={[$drawer, $drawerInsets]}>
+          <View style={$logoContainer}>
+            <Image source={logo} style={$logoImage} />
+          </View>
+
+          <FlatList<{ name: string; useCases: string[] }>
+            ref={menuRef}
+            contentContainerStyle={$flatListContentContainer}
+            data={Object.values(Demos).map(d => ({
+              name: d.name,
+              useCases: d.data.map(u => u.props.name),
+            }))}
+            keyExtractor={item => item.name}
+            renderItem={({ item, index: sectionIndex }) => (
+              <ShowroomListItem {...{ item, sectionIndex, handleScroll }} />
+            )}
+          />
+        </View>
+      )}
+    >
+      <Screen preset="fixed" safeAreaEdges={["top"]} contentContainerStyle={$screenContainer}>
+        <DrawerIconButton onPress={toggleDrawer} {...{ open, progress }} />
+
+        <SectionList
+          ref={listRef}
+          contentContainerStyle={$sectionListContentContainer}
+          stickySectionHeadersEnabled={false}
+          sections={Object.values(Demos)}
+          renderItem={({ item }) => item}
+          renderSectionFooter={() => <View style={$demoUseCasesSpacer} />}
+          ListHeaderComponent={
+            <View style={$heading}>
+              <Text preset="heading" tx="demoShowroomScreen.jumpStart" />
+            </View>
+          }
+          onScrollToIndexFailed={scrollToIndexFailed}
+          renderSectionHeader={({ section }) => {
+            return (
+              <View>
+                <Text preset="heading" style={$demoItemName}>
+                  {section.name}
+                </Text>
+                <Text style={$demoItemDescription}>{section.description}</Text>
+              </View>
+            )
+          }}
+        />
+      </Screen>
+    </DrawerLayout>
+  )
+}
 
 const $screenContainer: ViewStyle = {
   flex: 1,

@@ -64,10 +64,7 @@ export const DemoCard: Demo = {
       />
     </DemoUseCase>,
 
-    <DemoUseCase
-      name="Passing Content"
-      description="There are a few different ways to pass content."
-    >
+    <DemoUseCase name="Passing Content" description="There are a few different ways to pass content.">
       <Card heading="Via `heading` Prop" content="Via `content` Prop" footer="Via `footer` Prop" />
       <DemoDivider />
       <Card
@@ -90,21 +87,21 @@ export const DemoCard: Demo = {
           <Button
             preset="reversed"
             text="HeadingComponent"
-            LeftAccessory={(props) => <Icon style={props.style} icon="ladybug" />}
+            LeftAccessory={props => <Icon style={props.style} icon="ladybug" />}
           />
         }
         ContentComponent={
           <Button
             style={{ marginVertical: spacing.small }}
             text="ContentComponent"
-            LeftAccessory={(props) => <Icon style={props.style} icon="ladybug" />}
+            LeftAccessory={props => <Icon style={props.style} icon="ladybug" />}
           />
         }
         FooterComponent={
           <Button
             preset="reversed"
             text="FooterComponent"
-            LeftAccessory={(props) => <Icon style={props.style} icon="ladybug" />}
+            LeftAccessory={props => <Icon style={props.style} icon="ladybug" />}
           />
         }
       />

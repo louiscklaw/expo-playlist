@@ -69,7 +69,7 @@ export class Api {
       const rawData = response.data
 
       // This is where we transform the data into the shape we expect for our MST model.
-      const episodes: EpisodeSnapshotIn[] = rawData.items.map((raw) => ({
+      const episodes: EpisodeSnapshotIn[] = rawData.items.map(raw => ({
         ...raw,
       }))
 

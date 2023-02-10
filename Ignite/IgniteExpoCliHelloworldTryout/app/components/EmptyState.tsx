@@ -190,13 +190,7 @@ export function EmptyState(props: EmptyStateProps) {
       )}
 
       {isContentPresent && (
-        <Text
-          text={content}
-          tx={contentTx}
-          txOptions={contentTxOptions}
-          {...ContentTextProps}
-          style={$contentStyles}
-        />
+        <Text text={content} tx={contentTx} txOptions={contentTxOptions} {...ContentTextProps} style={$contentStyles} />
       )}
 
       {isButtonPresent && (

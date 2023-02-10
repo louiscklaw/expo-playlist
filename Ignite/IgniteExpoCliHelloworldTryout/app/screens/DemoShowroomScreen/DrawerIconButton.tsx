@@ -1,11 +1,6 @@
 import React, { useEffect } from "react"
 import { Pressable, PressableProps, ViewStyle } from "react-native"
-import Animated, {
-  interpolate,
-  interpolateColor,
-  useAnimatedStyle,
-  withSpring,
-} from "react-native-reanimated"
+import Animated, { interpolate, interpolateColor, useAnimatedStyle, withSpring } from "react-native-reanimated"
 import type { SharedValue } from "react-native-reanimated"
 import { isRTL } from "../../i18n"
 import { colors, spacing } from "../../theme"

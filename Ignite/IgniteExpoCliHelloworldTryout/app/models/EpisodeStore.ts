@@ -11,7 +11,7 @@ export const EpisodeStoreModel = types
     favoritesOnly: false,
   })
   .actions(withSetPropAction)
-  .actions((store) => ({
+  .actions(store => ({
     async fetchEpisodes() {
       const response = await api.getEpisodes()
       if (response.kind === "ok") {
@@ -27,7 +27,7 @@ export const EpisodeStoreModel = types
       store.favorites.remove(episode)
     },
   }))
-  .views((store) => ({
+  .views(store => ({
     get episodesForList() {
       return store.favoritesOnly ? store.favorites : store.episodes
     },
@@ -36,7 +36,7 @@ export const EpisodeStoreModel = types
       return store.favorites.includes(episode)
     },
   }))
-  .actions((store) => ({
+  .actions(store => ({
     toggleFavorite(episode: Episode) {
       if (store.hasFavorite(episode)) {
         store.removeFavorite(episode)

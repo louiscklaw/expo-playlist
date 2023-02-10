@@ -71,7 +71,7 @@ export function setReactotronRootStore(rootStore: RootStore, initialData: any) {
 
     // log state changes?
     if (logSnapshots) {
-      onSnapshot(rootStore, (snapshot) => {
+      onSnapshot(rootStore, snapshot => {
         Reactotron.display({ name, value: snapshot, preview: "New State" })
       })
     }
@@ -118,7 +118,7 @@ export function setupReactotron(customConfig: ReactotronConfig = {}) {
     // hookup mobx-state-tree middleware
     Reactotron.use(
       mst({
-        filter: (event) => RX.test(event.name) === false,
+        filter: event => RX.test(event.name) === false,
       }),
     )
 
@@ -155,7 +155,7 @@ export function setupReactotron(customConfig: ReactotronConfig = {}) {
 
     Reactotron.onCustomCommand({
       command: "navigateTo",
-      handler: (args) => {
+      handler: args => {
         const { route } = args
         if (route) {
           console.log(`Navigating to: ${route}`)

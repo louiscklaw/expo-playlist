@@ -18,10 +18,7 @@ export const DemoEmptyState: Demo = {
       <EmptyState preset="generic" />
     </DemoUseCase>,
 
-    <DemoUseCase
-      name="Passing Content"
-      description="There are a few different ways to pass content."
-    >
+    <DemoUseCase name="Passing Content" description="There are a few different ways to pass content.">
       <EmptyState
         imageSource={require("../../../../assets/images/logo.png")}
         heading="Customize Image"
@@ -30,11 +27,7 @@ export const DemoEmptyState: Demo = {
 
       <DemoDivider size={30} line />
 
-      <EmptyState
-        heading="Via `heading` Prop"
-        content="Via `content` prop."
-        button="Via `button` Prop"
-      />
+      <EmptyState heading="Via `heading` Prop" content="Via `content` prop." button="Via `button` Prop" />
 
       <DemoDivider size={30} line />
 

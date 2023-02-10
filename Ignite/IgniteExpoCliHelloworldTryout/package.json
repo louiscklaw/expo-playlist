@@ -30,6 +30,7 @@
     "expo:ios": "expo start --ios",
     "expo:web": "expo start --web",
     "expo:build:detox": "detox build -c ios.sim.expo",
+    "gitUpdate": "git add . && git commit -m \"update IgniteExpoCliHelloworldBottomSheetTryout,\" && git push",
     "expo:test:detox": "./bin/downloadExpoApp.sh && detox test --configuration ios.sim.expo"
   },
   "overrides": {
@@ -130,10 +131,21 @@
     "@expo/dev-server": "0.1.120"
   },
   "prettier": {
-    "printWidth": 100,
     "semi": false,
     "singleQuote": false,
-    "trailingComma": "all"
+    "trailingComma": "all",
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "htmlWhitespaceSensitivity": "strict",
+    "insertPragma": false,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 120,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "tabWidth": 2,
+    "useTabs": false
   },
   "detox": {
     "test-runner": "jest",

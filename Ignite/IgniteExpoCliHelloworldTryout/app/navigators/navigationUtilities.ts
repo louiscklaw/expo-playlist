@@ -1,11 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import { BackHandler, Platform } from "react-native"
-import {
-  PartialState,
-  NavigationState,
-  NavigationAction,
-  createNavigationContainerRef,
-} from "@react-navigation/native"
+import { PartialState, NavigationState, NavigationAction, createNavigationContainerRef } from "@react-navigation/native"
 import Config from "../config"
 import type { PersistNavigationConfig } from "../config/config.base"
 import { useIsMounted } from "../utils/useIsMounted"
@@ -112,7 +107,7 @@ export function useNavigationPersistence(storage: any, persistenceKey: string) {
 
   const routeNameRef = useRef<string | undefined>()
 
-  const onNavigationStateChange = (state) => {
+  const onNavigationStateChange = state => {
     const previousRouteName = routeNameRef.current
     const currentRouteName = getActiveRouteName(state)
 

@@ -35,12 +35,8 @@ export const DemoIcon: Demo = {
   description:
     "A component to render a registered icon. It is wrapped in a <TouchableOpacity /> if `onPress` is provided, otherwise a <View />.",
   data: [
-    <DemoUseCase
-      name="Icons"
-      description="List of icons registered inside the component."
-      layout="row"
-    >
-      {Object.keys(iconRegistry).map((icon) => (
+    <DemoUseCase name="Icons" description="List of icons registered inside the component." layout="row">
+      {Object.keys(iconRegistry).map(icon => (
         <View key={icon} style={$iconTile}>
           <Icon icon={icon as IconTypes} color={colors.tint} size={35} />
 
@@ -61,11 +57,7 @@ export const DemoIcon: Demo = {
     <DemoUseCase name="Color" description="There's a color prop." layout="row">
       <Icon icon="ladybug" color={colors.palette.accent500} containerStyle={$demoIconContainer} />
       <Icon icon="ladybug" color={colors.palette.primary500} containerStyle={$demoIconContainer} />
-      <Icon
-        icon="ladybug"
-        color={colors.palette.secondary500}
-        containerStyle={$demoIconContainer}
-      />
+      <Icon icon="ladybug" color={colors.palette.secondary500} containerStyle={$demoIconContainer} />
       <Icon icon="ladybug" color={colors.palette.neutral700} containerStyle={$demoIconContainer} />
       <Icon icon="ladybug" color={colors.palette.angry500} containerStyle={$demoIconContainer} />
     </DemoUseCase>,

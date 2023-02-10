@@ -5,8 +5,7 @@ const data = {
   title: "RNR 244 - Rewriting GasBuddy in React Native",
   pubDate: "2022-01-20 21:05:36",
   link: "https://www.reactnativeradio.com/",
-  author:
-    "rnradio@infinite.red (Max Metral, Mark Rickert, Jamon Holmgren, Robin Heinze, Mazen Chami)",
+  author: "rnradio@infinite.red (Max Metral, Mark Rickert, Jamon Holmgren, Robin Heinze, Mazen Chami)",
   thumbnail:
     "https://image.simplecastcdn.com/images/fd1212b1-7d08-4c5a-8506-00188a4c6528/acb9f5dc-7451-42af-8c97-2f0f29d122ae/3000x3000/rnr-episode-rnr244.jpg?aid=rss_feed",
   description: "",
