@@ -1,10 +1,12 @@
 import { observer } from "mobx-react-lite"
 import React, { FC, useEffect, useMemo, useRef, useState } from "react"
-import { TextInput, TextStyle, ViewStyle } from "react-native"
+import { StyleSheet, TextInput, TextStyle, ViewStyle, TouchableOpacity } from "react-native"
 import { Button, Icon, Screen, Text, TextField, TextFieldAccessoryProps } from "../components"
 import { useStores } from "../models"
 import { AppStackScreenProps } from "../navigators"
 import { colors, spacing } from "../theme"
+import BottomSheet from "react-native-gesture-bottom-sheet";
+import { SafeAreaView } from "react-native-safe-area-context"
 
 interface LoginScreenProps extends AppStackScreenProps<"Login"> {}
 
@@ -64,6 +66,9 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
     }
   }, [])
 
+  const bottomSheet = useRef(null);
+
+
   return (
     <Screen preset="auto" contentContainerStyle={$screenContentContainer} safeAreaEdges={["top", "bottom"]}>
       <Text testID="login-heading" tx="loginScreen.signIn" preset="heading" style={$signIn} />
@@ -103,6 +108,17 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
       />
 
       <Button testID="login-button" tx="loginScreen.tapToSignIn" style={$tapButton} preset="reversed" onPress={login} />
+      <SafeAreaView style={styles.container}>
+      <BottomSheet hasDraggableIcon ref={bottomSheet} height={600} />
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() =>  { bottomSheet.current.show() }}
+      >
+        <Text style={styles.text}>Open modal</Text>
+      </TouchableOpacity>
+    </SafeAreaView>
+
+<Text tx={'helloworld'} />
     </Screen>
   )
 })
@@ -134,3 +150,32 @@ const $tapButton: ViewStyle = {
 }
 
 // @demo remove-file
+
+const styles = StyleSheet.create({
+  button: {
+    height: 50,
+    width: 150,
+    backgroundColor: "#140078",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 20,
+    shadowColor: "#8559da",
+    shadowOpacity: 0.7,
+    shadowOffset: {
+      height: 4,
+      width: 4,
+    },
+    shadowRadius: 5,
+    elevation: 6,
+  },
+  text: {
+    color: "white",
+    fontWeight: "600",
+  },
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
+
