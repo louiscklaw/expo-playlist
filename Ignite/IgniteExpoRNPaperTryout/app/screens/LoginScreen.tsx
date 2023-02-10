@@ -8,8 +8,17 @@ import { colors, spacing } from "../theme"
 import { Button as PButton } from 'react-native-paper';
 import { Chip } from 'react-native-paper';
 import { Text as PText } from 'react-native-paper';
+import { BottomNavigation } from 'react-native-paper';
 
 interface LoginScreenProps extends AppStackScreenProps<"Login"> {}
+
+
+const MusicRoute = () => <PText>Music</PText>;
+const AlbumsRoute = () => <PText>Albums</PText>;
+const RecentsRoute = () => <PText>Recents</PText>;
+const NotificationsRoute = () => <PText>Notifications</PText>;
+
+
 
 export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_props) {
   const authPasswordInput = useRef<TextInput>()
@@ -66,6 +75,21 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
       setAuthEmail("")
     }
   }, [])
+
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    { key: 'music', title: 'Favorites', focusedIcon: 'heart', unfocusedIcon: 'heart-outline'},
+    { key: 'albums', title: 'Albums', focusedIcon: 'album' },
+    { key: 'recents', title: 'Recents', focusedIcon: 'history' },
+    { key: 'notifications', title: 'Notifications', focusedIcon: 'bell', unfocusedIcon: 'bell-outline' },
+  ]);
+  const renderScene = BottomNavigation.SceneMap({
+    music: MusicRoute,
+    albums: AlbumsRoute,
+    recents: RecentsRoute,
+    notifications: NotificationsRoute,
+  });
+
 
   return (
     <Screen preset="auto" contentContainerStyle={$screenContentContainer} safeAreaEdges={["top", "bottom"]}>
@@ -140,6 +164,13 @@ export const LoginScreen: FC<LoginScreenProps> = observer(function LoginScreen(_
       <Text tx={'123321'} />
 
       <Button testID="login-button" tx="loginScreen.tapToSignIn" style={$tapButton} preset="reversed" onPress={login} />
+
+      <BottomNavigation
+      navigationState={{ index, routes }}
+      onIndexChange={setIndex}
+      renderScene={renderScene}
+    />
+
     </Screen>
   )
 })
