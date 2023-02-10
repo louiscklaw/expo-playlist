@@ -3,6 +3,6 @@
 set -ex
 
 
-rm -rf IgniteExpoCliHelloworldBottomSheetTryout
+rm -rf IgniteExpoRNPaperTryout
 
-cp -r IgniteExpoCliHelloworldTryout IgniteExpoCliHelloworldBottomSheetTryout
+cp -r IgniteExpoCliHelloworldTryout IgniteExpoRNPaperTryout
