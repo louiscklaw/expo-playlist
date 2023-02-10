@@ -81,6 +81,7 @@
     "@babel/plugin-proposal-optional-catch-binding": "7.16.7",
     "@babel/preset-env": "^7.16.11",
     "@babel/runtime": "^7.18.3",
+    "@expo/ngrok": "^4.1.0",
     "@react-native-community/cli-platform-ios": "^8.0.2",
     "@rnx-kit/metro-config": "^1.2.32",
     "@rnx-kit/metro-resolver-symlinks": "0.1.21",
