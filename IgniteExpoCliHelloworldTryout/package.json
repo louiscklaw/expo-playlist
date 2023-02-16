@@ -30,7 +30,8 @@
     "expo:ios": "expo start --ios",
     "expo:web": "expo start --web",
     "expo:build:detox": "detox build -c ios.sim.expo",
-    "expo:test:detox": "./bin/downloadExpoApp.sh && detox test --configuration ios.sim.expo"
+    "expo:test:detox": "./bin/downloadExpoApp.sh && detox test --configuration ios.sim.expo",
+    "gitUpdate": "git add . && git commit -m \"update igniteexpoclihelloworldtryout,\" && git push"
   },
   "overrides": {
     "react-error-overlay": "6.0.9"
@@ -112,7 +113,6 @@
     "mocha": "6",
     "patch-package": "6.4.7",
     "postinstall-prepare": "1.0.1",
-    "prettier": "2.6.2",
     "query-string": "^7.0.1",
     "react-devtools-core": "4.24.7",
     "react-dom": "18.1.0",
